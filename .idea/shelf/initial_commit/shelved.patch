@@ -1,0 +1,78 @@
+Index: angular-recipe/src/app/recipe/recipe.model.ts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- angular-recipe/src/app/recipe/recipe.model.ts	(date 1539636759000)
++++ angular-recipe/src/app/recipe/recipe.model.ts	(date 1539636759000)
+@@ -0,0 +1,12 @@
++export class RecipeModel {
++  public name: string;
++  public description: string;
++  public imagePath: string;
++
++  constructor(name: string, description: string, imagePath: string){
++    this.imagePath = imagePath;
++      this.name = name;
++      this.description = description;
++  }
++
++}
+Index: angular-recipe/src/app/shared/ingredient.model.ts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- angular-recipe/src/app/shared/ingredient.model.ts	(date 1539638657000)
++++ angular-recipe/src/app/shared/ingredient.model.ts	(date 1539638657000)
+@@ -0,0 +1,4 @@
++export class IngredientModel {
++  constructor(public name:string, public amount: number){
++  }
++}
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/vcs.xml	(date 1539439848000)
++++ .idea/vcs.xml	(date 1539439848000)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: angular-recipe/src/app/shopping-list/shopping-edit/shopping-edit.component.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- angular-recipe/src/app/shopping-list/shopping-edit/shopping-edit.component.html	(date 1539639236000)
++++ angular-recipe/src/app/shopping-list/shopping-edit/shopping-edit.component.html	(date 1539639236000)
+@@ -0,0 +1,23 @@
++<div class="row">
++  <div class="col-xs-12">
++    <form action="">
++      <div class="row">
++        <div class="col-sm-5 form-group">
++          <label for="name">Name</label>
++          <input type="text" id="Name" class="form-control">
++        </div>
++        <div class="col-sm-2 form-group">
++          <label for="amount">Amount</label>
++          <input type="number" id="amount" class="form-control">
++        </div>
++        <div class="row">
++          <div class="col-xs-12">
++            <button class="btn btn-success" type="submit">Add</button>
++            <button class="btn btn-danger" type="button">Delete</button>
++            <button class="btn btn-primary" type="button">Clear</button>
++          </div>
++        </div>
++      </div>
++    </form>
++  </div>
++</div>
